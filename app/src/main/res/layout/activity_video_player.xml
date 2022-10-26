@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:context=".activity.VideoPlayerActivity">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_share_videoPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_share_24" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_download_videoPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/img_share_videoPlayer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cloud_download_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_margin="@dimen/margin_16dp"
+           app:layout_constraintStart_toEndOf="@id/img_download_videoPlayer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_star_outline_24" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_showImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="2:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.unix.filimo.customView.CustomTextView
+            android:id="@+id/txt_story_videoPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:text="داستان فیلم"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_showImage" />
+
+        <com.unix.filimo.customView.CustomTextView
+            android:id="@+id/txt_desc_videoPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toTopOf="@id/txt_preview_videoPlayer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_story_videoPlayer" />
+
+        <com.unix.filimo.customView.CustomTextView
+            android:id="@+id/txt_preview_videoPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:text="پیش نمایش فیلم"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_desc_videoPlayer" />
+
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view_videoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_preview_videoPlayer" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
